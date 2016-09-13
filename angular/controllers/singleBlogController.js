@@ -1,4 +1,3 @@
-
 myApp.controller('singleBlogController',['$http','$routeParams',function($http,$routeParams) {
 
   //create a context
@@ -24,10 +23,6 @@ myApp.controller('singleBlogController',['$http','$routeParams',function($http,$
   console.log(this.blogId);
 
 
-  
-
-  this.loadSingeBlog = function(){
-   
   this.baseUrl = 'https://blog.theguywithideas.com/api/blogs';
 
   this.loadSingeBlog = function(){
@@ -35,8 +30,7 @@ myApp.controller('singleBlogController',['$http','$routeParams',function($http,$
       $http({
         method: 'GET',
         url: main.baseUrl+'/'+main.blogId
-   
-   }).then(function successCallback(response) {
+      }).then(function successCallback(response) {
           // this callback will be called asynchronously
           // when the response is available
           //console.log(response);
@@ -62,4 +56,3 @@ myApp.controller('singleBlogController',['$http','$routeParams',function($http,$
 
 
 }]); // end controller
-
