@@ -24,9 +24,9 @@ myApp.factory('Blog1',function($http){
 
 	}// end create blog 
 	
-	blogAPIS.singleBlog = function(blogData){
+	blogAPIS.singleBlog = function(blogId){
 
-		return $http.get(baseUrl+'/'+blogId,blogData)
+		return $http.get(baseUrl+'/'+blogId,blogId)
 
 	}// end create blog 
 
