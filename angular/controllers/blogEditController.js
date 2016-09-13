@@ -16,7 +16,7 @@ myApp.controller('editBlogController',['$http','$routeParams','$location','Blog1
 
   this.getCurrentPost = function(){
           
-          Blog1.editABlog(main.blogId,main.blog)
+    Blog1.singleBlog(main.blogId)
 
      .then(function successCallback(response) {
           // this callback will be called asynchronously
@@ -52,13 +52,9 @@ myApp.controller('editBlogController',['$http','$routeParams','$location','Blog1
 
       console.log(myData);
    
-      $http({
-
-        method: 'PUT',
-        data  : myData,
-        url: main.baseUrl+'/'+blogId+'/edit'
-        
-      }).then(function successCallback(response) {
+       Blog1.editABlog(main.blogId,myData)
+      
+      .then(function successCallback(response) {
           // this callback will be called asynchronously
           // when the response is available
           //console.log(response);
