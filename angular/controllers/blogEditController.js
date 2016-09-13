@@ -1,5 +1,5 @@
 
-myApp.controller('editBlogController',['$http','$routeParams','$location',function($http,$routeParams,$location) {
+myApp.controller('editBlogController',['$http','$routeParams','$location','Blog1',function($http,$routeParams,$location,Blog1) {
 
   //create a context
   var main = this;
@@ -9,17 +9,16 @@ myApp.controller('editBlogController',['$http','$routeParams','$location',functi
   this.pageSubHeading = 'Change the values you want to change'
  
 
-  this.baseUrl = 'https://blog.theguywithideas.com/api/blogs';
+
 
   this.blogId = $routeParams.blogId;
   console.log(this.blogId)
 
   this.getCurrentPost = function(){
+          
+          Blog1.editABlog(main.blogId,main.blog)
 
-      $http({
-        method: 'GET',
-        url: main.baseUrl+'/'+main.blogId
-      }).then(function successCallback(response) {
+     .then(function successCallback(response) {
           // this callback will be called asynchronously
           // when the response is available
           //console.log(response);
