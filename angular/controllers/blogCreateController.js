@@ -1,4 +1,4 @@
-myApp.controller('blogCreateController',['$http','$location',function($http,$location) {
+myApp.controller('blogCreateController',['$http','$location','Blog1',function($http,$location,Blog1) {
 
   //create a context
   var main = this;
@@ -8,7 +8,7 @@ myApp.controller('blogCreateController',['$http','$location',function($http,$loc
   this.pageSubHeading = 'please fill all the data'
  
 
-  this.baseUrl = 'https://blog.theguywithideas.com/api/blogs';
+
 
   this.createPost = function(){
 
@@ -24,13 +24,8 @@ myApp.controller('blogCreateController',['$http','$location',function($http,$loc
 
       console.log(myData);
    
-      $http({
-
-        method: 'POST',
-        data  : myData,
-        url: main.baseUrl+'/create'
-        
-      }).then(function successCallback(response) {
+      Blog1.createABlog()
+     .then(function successCallback(response) {
           // this callback will be called asynchronously
           // when the response is available
           //console.log(response);
