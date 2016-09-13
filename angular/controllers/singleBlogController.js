@@ -1,5 +1,5 @@
 
-myApp.controller('singleBlogController',['$http','$routeParams',function($http,$routeParams) {
+myApp.controller('singleBlogController',['$http','$routeParams','Blog1',function($http,$routeParams,Blog1) {
 
   //create a context
   var main = this;
@@ -28,10 +28,8 @@ myApp.controller('singleBlogController',['$http','$routeParams',function($http,$
 
   this.loadSingeBlog = function(){
    
-      $http({
-        method: 'GET',
-        url: main.baseUrl+'/'+main.blogId
-      }).then(function successCallback(response) {
+      Blog1.singleBlog(blogId)
+      .then(function successCallback(response) {
           // this callback will be called asynchronously
           // when the response is available
           //console.log(response);
