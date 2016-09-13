@@ -23,6 +23,12 @@ myApp.factory('Blog1',function($http){
 		return $http.post(baseUrl+'/create',blogData)
 
 	}// end create blog 
+	
+	blogAPIS.singleBlog = function(blogData){
+
+		return $http.get(baseUrl+'/'+blogId,blogData)
+
+	}// end create blog 
 
 	blogAPIS.editABlog = function(blogId,blogData){
 
