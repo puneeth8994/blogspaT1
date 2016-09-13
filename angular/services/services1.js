@@ -4,7 +4,7 @@
 //of the function returned after the execution
 // 
 
-myApp.factory('Blog',function($http){
+myApp.factory('Blog1',function($http){
 
 	// this method first 
 	var blogAPIS  =  {};
