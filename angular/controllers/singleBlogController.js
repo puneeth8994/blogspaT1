@@ -28,7 +28,7 @@ myApp.controller('singleBlogController',['$http','$routeParams','Blog1',function
 
   this.loadSingeBlog = function(){
    
-   Blog1.singleBlog(blogId)
+   Blog1.singleBlog(blogData)
    
    .then(function successCallback(response) {
           // this callback will be called asynchronously
