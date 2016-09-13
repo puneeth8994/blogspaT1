@@ -46,13 +46,10 @@ myApp.controller('mainController',['$http','Blog1',function($http,Blog1) {
       console.log(index);
       
       console.log(main.blogs.length);
-      $http({
-
-        method: 'POST',
-        data  : myData,
-        url: main.baseUrl+'/'+blogId+'/remove'
-        
-      }).then(function successCallback(response) {
+     
+     Blog1.deleteBlog(blogId)
+     
+     .then(function successCallback(response) {
           // this callback will be called asynchronously
           // when the response is available
           //console.log(response);
