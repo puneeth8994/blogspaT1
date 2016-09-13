@@ -16,7 +16,7 @@ myApp.controller('editBlogController',['$http','$routeParams','$location','Blog1
 
   this.getCurrentPost = function(){
           
-          Blog1.editABlog(main.blogId,main.blg)
+          Blog1.editABlog(main.blogId,main.blog)
 
      .then(function successCallback(response) {
           // this callback will be called asynchronously
