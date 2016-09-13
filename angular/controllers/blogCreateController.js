@@ -24,7 +24,7 @@ myApp.controller('blogCreateController',['$http','$location','Blog1',function($h
 
       console.log(myData);
    
-      Blog1.createABlog(myDat)
+      Blog1.createABlog(myData)
      .then(function successCallback(response) {
           // this callback will be called asynchronously
           // when the response is available
