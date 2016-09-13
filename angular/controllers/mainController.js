@@ -1,5 +1,5 @@
 // this is without $scope
-myApp.controller('mainController',['$http','Blog1',function($http) {
+myApp.controller('mainController',['$http','Blog1',function($http,Blog1) {
 
   //create a context
   var main = this;
