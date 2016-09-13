@@ -1,5 +1,5 @@
 // this is without $scope
-myApp.controller('mainController',['$http',function($http) {
+myApp.controller('mainController',['$http','Blog1',function($http) {
 
   //create a context
   var main = this;
@@ -18,10 +18,8 @@ myApp.controller('mainController',['$http',function($http) {
 
   this.loadAllBlogs = function(){
    
-      $http({
-        method: 'GET',
-        url: main.baseUrl+'/all'
-      }).then(function successCallback(response) {
+      Blog1.getAllBlogs()
+     .then(function successCallback(response) {
           // this callback will be called asynchronously
           // when the response is available
           console.log(response);
