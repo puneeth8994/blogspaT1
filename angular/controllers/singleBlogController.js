@@ -1,4 +1,4 @@
-myApp.controller('singleBlogController',['$http','$routeParams',Blog1,function($http,$routeParams,Blog1) {
+myApp.controller('singleBlogController',['$http','$routeParams','Blog1',function($http,$routeParams,Blog1) {
 
   //create a context
   var main = this;
