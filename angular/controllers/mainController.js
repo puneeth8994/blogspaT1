@@ -12,7 +12,7 @@ myApp.controller('mainController',['$http','Blog1',function($http,Blog1) {
   this.blogs = [];
   console.log(this.blogs);
 
-  this.baseUrl = 'https://blog.theguywithideas.com/api/blogs';
+  
 
 
 
